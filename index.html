@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project NativeJS</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="footer">
+        <div class="footer-logo">
+          <img src="./images/ponypuma.png" alt="image" />
+        </div>
+        <div class="footer-action">
+          <input type="text" placeholder="Поиск" />
+          <hr />
+          <button type="button">
+            <img src="./images/shopping-cart (2).png" alt="image" />
+          </button>
+        </div>
+      </div>
+      <div class="addProducts">
+        <button class="btn btn-4 btn-sep icon-send">Add product</button>
+      </div>
+      <section class="products"></section>
+      <div class="inpProducts">
+        <form class="formProducts">
+          <input type="search" placeholder="Enter image" class="input inpImg" />
+          <select class="select">
+            <option value="t-shirts">T-shirts</option>
+            <option value="shoes">Shoes</option>
+            <option value="jacket">Jacket</option>
+            <option value="pants">Pants</option>
+          </select>
+          <input type="text" placeholder="Name" class="input inpName" />
+          <input type="text" placeholder="Price" class="input inpPrice" />
+          <button type="submit">ADD</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
