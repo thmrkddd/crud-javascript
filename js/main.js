@@ -71,7 +71,7 @@ async function readProd() {
         <img src="./images/view.png" alt="image" id="${elem.id}" class="viewBtn"/>
       </button>
       <button class="actBtn editBtn" type="button" id="${elem.id}">
-       <img src="./images/edit.png" alt="image" id="${elem.id}" class="editBtn"/>
+       <a href="#top"><img src="./images/edit.png" alt="image" id="${elem.id}" class="editBtn"/></a>
       </button>
       <button class="actBtn delBtn" type="button" id="${elem.id}">
         <img src="./images/bin (1).png" alt="image" id="${elem.id}" class="delBtn" />
@@ -214,3 +214,25 @@ document.addEventListener("click", (e) => {
     prodSection.style.display = "flex";
   }
 });
+
+let myButton = document.getElementById("scrollToTopBtn");
+
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 150 ||
+    document.documentElement.scrollTop > 150
+  ) {
+    myButton.style.display = "block";
+  } else {
+    myButton.style.display = "none";
+  }
+}
+
+function scrollToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
