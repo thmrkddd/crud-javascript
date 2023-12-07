@@ -13,13 +13,45 @@
     />
   </head>
   <body>
+    <!-- -
+      Функционалы
+- Авторизация*/Регистрация* - 5 баллов❌
+- CRUD - 40 баллов✅
+- Модальное окно для товара - 5 баллов❌
+- Детальный просмотр для товара - 5 баллов✅
+- Поиск - 5 баллов✅
+- Пагинация - 5 баллов✅
+- Фильтрация - 5 баллов
+- Json-server - 5 баллов✅
+- Адаптивность  - 5 баллов✅
+- Дизайн - 20 баллов✅
+- Роль админа для сайта* - 5 баллов ❌
+Экстра-функционалы
+Корзина - 
+-->
     <div class="container">
       <div class="footer">
         <div class="footer-logo">
           <img src="./images/ponypuma.png" alt="image" />
         </div>
         <div class="footer-action">
-          <input type="text" placeholder="Поиск" />
+          <ul class="lang-list">
+            <li>
+              <a href="index.html"
+                ><img src="./images/russia.png" alt="img"
+              /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/kyrgyzstan.png" alt="img" /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./images/united-kingdom.png" alt="img"
+              /></a>
+            </li>
+          </ul>
+          <hr />
+          <input type="text" placeholder="Поиск" class="inpSearch" />
           <hr />
           <button type="button">
             <img src="./images/shopping-cart (2).png" alt="image" />
@@ -27,24 +59,54 @@
         </div>
       </div>
       <div class="addProducts">
-        <button class="btn btn-4 btn-sep icon-send">Add product</button>
+        <button class="icon-addProd addProd">добавить товар</button>
       </div>
-      <section class="products"></section>
+      <section class="prodSection"></section>
+      <section class="viewProd"></section>
       <div class="inpProducts">
         <form class="formProducts">
-          <input type="search" placeholder="Enter image" class="input inpImg" />
+          <button type="button" class="closeBtn">
+            <img src="./images/close.png" alt="image" />
+          </button>
+          <input type="search" placeholder="Изображение" class="input inpImg" />
           <select class="select">
-            <option value="t-shirts">T-shirts</option>
-            <option value="shoes">Shoes</option>
-            <option value="jacket">Jacket</option>
-            <option value="pants">Pants</option>
+            <option value="T-Shirts">Футболка</option>
+            <option value="Shoes">Обувь</option>
+            <option value="Jacket">Куртка</option>
+            <option value="Pants">Штаны</option>
           </select>
-          <input type="text" placeholder="Name" class="input inpName" />
-          <input type="text" placeholder="Price" class="input inpPrice" />
-          <button type="submit">ADD</button>
+          <input type="text" placeholder="Имя" class="input inpName" />
+          <input type="number" placeholder="Цена" class="input inpPrice" />
+          <button type="submit" class="addBtn">ДОБАВИТЬ</button>
         </form>
       </div>
+      <div class="editInpProducts">
+        <form class="editFormProducts">
+          <button type="button" class="editCloseBtn">
+            <img src="./images/close.png" alt="image" />
+          </button>
+          <input
+            type="search"
+            placeholder="Изображение"
+            class="input editInpImg"
+          />
+          <select class="editSelect">
+            <option value="T-Shirts">Футболка</option>
+            <option value="Shoes">Обувь</option>
+            <option value="Jacket">Куртка</option>
+            <option value="Pants">Штаны</option>
+          </select>
+          <input type="text" placeholder="Имя" class="input editInpName" />
+          <input type="number" placeholder="Цена" class="input editInpPrice" />
+          <button type="submit" class="addBtn editAddBtn">ИЗМЕНИТЬ</button>
+        </form>
+      </div>
+      <div class="pageBtns">
+        <button type="button" class="prevBtn">◀</button>
+        <button type="button" class="nextBtn">▶</button>
+      </div>
     </div>
+
     <script src="./js/main.js"></script>
   </body>
 </html>
