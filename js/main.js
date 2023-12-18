@@ -136,6 +136,7 @@ editAddBtn.addEventListener("click", () => {
     prodPrice: editInpPrice.value,
   };
   editProd(editedProd, editAddBtn.id);
+  editInpProducts.style.display = "none";
 });
 
 function editProd(editProd, id) {
@@ -147,6 +148,7 @@ function editProd(editProd, id) {
     body: JSON.stringify(editProd),
   }).then(() => readProd());
 }
+
 readProd();
 
 function pageFunc() {

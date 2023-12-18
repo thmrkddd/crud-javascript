@@ -575,6 +575,7 @@
 .footer-container1 li {
   list-style-type: none;
   color: #818181;
+  cursor: pointer;
 }
 .footer-container1 li:hover {
   color: white;
